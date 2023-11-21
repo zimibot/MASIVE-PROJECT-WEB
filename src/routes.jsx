@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, } from "react-router-dom";
 import Landingspages from "./pages/landing-pages";
 import Login from "./pages/auth/login";
 import Register from "./pages/auth/register";
@@ -45,22 +45,27 @@ const RoutersPages = () => {
             element: <HelpCenter />,
             // errorElement: <ErrorPage />,
         },
-        // {
-        //     path: "/admin",
-        //     // errorElement: <ErrorPage />
-        //     children: {
-        //         path: "/",
-        //         element: <HelpCenter />,
-        //     },
-        // },
-        // {
-        //     path: "/user",
-        //     // errorElement: <ErrorPage />
-        //     children: {
-        //         path: "/",
-        //         element: <HelpCenter />,
-        //     },
-        // },
+        {
+            path: "/admin",
+            children: [
+                {
+                    path: "dashboard",
+                    element: <HelpCenter />,
+                    // loader: eventLoader,
+                },
+            ],
+        },
+        {
+            path: "/user",
+            children: [
+                {
+                    path: "dashboard",
+                    element: <HelpCenter />,
+                    // loader: eventLoader,
+                },
+            ],
+        },
+
     ]);
 
     return <RouterProvider router={router} />
