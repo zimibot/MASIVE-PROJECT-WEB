@@ -45,22 +45,22 @@ const RoutersPages = () => {
             element: <HelpCenter />,
             // errorElement: <ErrorPage />,
         },
-        {
-            path: "/admin",
-            // errorElement: <ErrorPage />
-            children: {
-                path: "/",
-                element: <HelpCenter />,
-            },
-        },
-        {
-            path: "/user",
-            // errorElement: <ErrorPage />
-            children: {
-                path: "/",
-                element: <HelpCenter />,
-            },
-        },
+        // {
+        //     path: "/admin",
+        //     // errorElement: <ErrorPage />
+        //     children: {
+        //         path: "/",
+        //         element: <HelpCenter />,
+        //     },
+        // },
+        // {
+        //     path: "/user",
+        //     // errorElement: <ErrorPage />
+        //     children: {
+        //         path: "/",
+        //         element: <HelpCenter />,
+        //     },
+        // },
     ]);
 
     return <RouterProvider router={router} />

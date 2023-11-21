@@ -8,8 +8,7 @@ import icon3 from "../..//assets/icon/icon-3.svg"
 import star from "../..//assets/icon/star.png"
 import shield from "../..//assets/icon/shield.png"
 import rocked from "../..//assets/icon/rocked.png"
-import { Button, IconButton } from "@mui/material"
-import { Link } from "react-router-dom"
+import { Button } from "@mui/material"
 
 const Landingspages = () => {
     return <Layout>
