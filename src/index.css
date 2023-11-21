@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply text-lg text-gray-500 font-[inter];
+  }
+
+  h1 {
+    @apply text-7xl font-bold text-black;
+  }
+
+  h2 {
+    @apply text-4xl font-bold text-black;
+  }
+
+  h3 {
+    @apply text-2xl font-bold text-black;
+  }
+  a {
+    @apply text-black;
+  }
+
+  .container {
+   @apply px-[40px] lg:px-[60px]
+  }
+
+}
+
