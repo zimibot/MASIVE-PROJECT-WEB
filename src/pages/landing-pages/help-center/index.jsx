@@ -8,6 +8,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { ButtonBorder } from "../../../component/elements/button-border";
+import { Send } from "@mui/icons-material";
 const HelpCenter = () => {
     return <Layout>
         <div className="w-full min-h-[600px] flex flex-col py-10 bg-red-100">
@@ -69,7 +70,6 @@ const HelpCenter = () => {
                                             <FormControlLabel value="female" control={<Radio />} label="Tentang Aplikasi" />
                                             <FormControlLabel value="male" control={<Radio />} label="Masalah Pengguna" />
                                             <FormControlLabel value="other" control={<Radio />} label="Other" />
-
                                         </RadioGroup>
                                     </FormControl>
                                 </div>
@@ -78,7 +78,7 @@ const HelpCenter = () => {
                                     <textarea className="w-full min-h-[250px] border p-4" placeholder="Tulis pesan anda..."></textarea>
                                 </div>
                                 <div>
-                                    <ButtonBorder>KIRIM</ButtonBorder>
+                                    <ButtonBorder iconRight={<Send></Send>}> KIRIM</ButtonBorder>
                                 </div>
                             </div>
 

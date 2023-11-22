@@ -18,83 +18,68 @@ const RoutersPages = () => {
         {
             path: "/",
             element: <Landingspages />,
-            // errorElement: <ErrorPage />,
         },
         {
             path: "/login",
             element: <Login />,
-            // errorElement: <ErrorPage />,
         },
         {
             path: "/registrasi",
             element: <Register />,
-            // errorElement: <ErrorPage />,
         },
         {
             path: "/kontak-kami",
             element: <ContactUs />,
-            // errorElement: <ErrorPage />,
         },
         {
             path: "/tentang-kami",
             element: <TentangKami />,
-            // errorElement: <ErrorPage />,
         },
         {
             path: "/terofservice",
             element: <TerofService />,
-            // errorElement: <ErrorPage />,
         },
         {
             path: "/helpcenter",
             element: <HelpCenter />,
-            // errorElement: <ErrorPage />,
         },
         {
-            path: "/helpcenteradmin",
-            element: <HelpCenterAdmin/>,
-            // errorElement: <ErrorPage />,
+            path: "/admin",
+            children: [
+                {
+                    path: "halamanunit",
+                    element: <HalamanUnit />,
+                },
+                {
+                    path: "halamanbeginer",
+                    element: <HalamanBeginer />,
+                },
+                {
+                    path: "helpcenter",
+                    element: <HelpCenterAdmin />,
+                },
+                {
+                    path: "halamankategori",
+                    element: <HalamanKategori />,
+                    children: [
+                        {
+                            path: "tambahkategori",
+                            element: <TambahKategori />,
+                        }
+                    ]
+                },
+            ],
         },
         {
-            path: "/tambahkategori",
-            element: <TambahKategori/>,
-            // errorElement: <ErrorPage />,
+            path: "/user",
+            children: [
+                {
+                    path: "dashboard",
+                    element: <HelpCenter />,
+                    // loader: eventLoader,
+                },
+            ],
         },
-        {
-            path: "/halamankategori",
-            element: <HalamanKategori/>,
-            // errorElement: <ErrorPage />,
-        },
-        {
-            path: "/halamanbeginer",
-            element: <HalamanBeginer/>,
-            // errorElement: <ErrorPage />,
-        },
-        {
-            path: "/halamanunit",
-            element: <HalamanUnit/>,
-            // errorElement: <ErrorPage />,
-        },
-        // {
-        //     path: "/admin",
-        //     children: [
-        //         {
-        //             path: "dashboard",
-        //             element: <HelpCenter />,
-        //             // loader: eventLoader,
-        //         },
-        //     ],
-        // },
-        // {
-        //     path: "/user",
-        //     children: [
-        //         {
-        //             path: "dashboard",
-        //             element: <HelpCenter />,
-        //             // loader: eventLoader,
-        //         },
-        //     ],
-        // },
 
     ]);
 
