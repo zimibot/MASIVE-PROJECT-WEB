@@ -6,6 +6,11 @@ import ContactUs from "./pages/landing-pages/kontak-kami";
 import TentangKami from "./pages/landing-pages/tentang-kami";
 import TerofService from "./pages/landing-pages/termofservice";
 import HelpCenter from "./pages/landing-pages/help-center";
+import TambahKategori from "./pages/admin/tambah-kategori";
+import HelpCenterAdmin from "./pages/admin/helpcenter-admin";
+import HalamanKategori from "./pages/admin/halaman-kategori";
+import HalamanBeginer from "./pages/admin/halaman-beginer";
+import HalamanUnit from "./pages/admin/halaman-unit";
 
 
 const RoutersPages = () => {
@@ -46,25 +51,50 @@ const RoutersPages = () => {
             // errorElement: <ErrorPage />,
         },
         {
-            path: "/admin",
-            children: [
-                {
-                    path: "dashboard",
-                    element: <HelpCenter />,
-                    // loader: eventLoader,
-                },
-            ],
+            path: "/helpcenteradmin",
+            element: <HelpCenterAdmin/>,
+            // errorElement: <ErrorPage />,
         },
         {
-            path: "/user",
-            children: [
-                {
-                    path: "dashboard",
-                    element: <HelpCenter />,
-                    // loader: eventLoader,
-                },
-            ],
+            path: "/tambahkategori",
+            element: <TambahKategori/>,
+            // errorElement: <ErrorPage />,
         },
+        {
+            path: "/halamankategori",
+            element: <HalamanKategori/>,
+            // errorElement: <ErrorPage />,
+        },
+        {
+            path: "/halamanbeginer",
+            element: <HalamanBeginer/>,
+            // errorElement: <ErrorPage />,
+        },
+        {
+            path: "/halamanunit",
+            element: <HalamanUnit/>,
+            // errorElement: <ErrorPage />,
+        },
+        // {
+        //     path: "/admin",
+        //     children: [
+        //         {
+        //             path: "dashboard",
+        //             element: <HelpCenter />,
+        //             // loader: eventLoader,
+        //         },
+        //     ],
+        // },
+        // {
+        //     path: "/user",
+        //     children: [
+        //         {
+        //             path: "dashboard",
+        //             element: <HelpCenter />,
+        //             // loader: eventLoader,
+        //         },
+        //     ],
+        // },
 
     ]);
 
