@@ -14,8 +14,13 @@ function HalamanUnit() {
     <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
   Unit 1
 </button>
-    <div>
-    </div>
+
+<div className="grid gap-4 grid-cols-3 grid-rows-3 bg-gray-300 mt-5 sm:rounded-lg  px-4 ">
+  <b>Deskripsi</b>
+</div>
+<div className="grid gap-4 grid-cols-3 grid-rows-3 bg-gray-300 mt-5 sm:rounded-lg  px-4 ">
+  <b>Buku Panduan</b>
+</div>
 <div className="mt-4 float-right">
 <ButtonBorder>Tambah Data</ButtonBorder>
 </div><br />
