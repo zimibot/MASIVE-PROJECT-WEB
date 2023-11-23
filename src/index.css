@@ -4,8 +4,13 @@
 
 
 @layer base {
+
+  .isActive .MuiListItemIcon-root {
+    @apply text-white;
+  }
+
   body {
-    @apply text-lg text-gray-500 font-[inter];
+    @apply text-lg text-gray-500 font-[inter] bg-[#F4F4F4];
   }
 
   h1 {
@@ -19,13 +24,13 @@
   h3 {
     @apply text-2xl font-bold text-black;
   }
+
   a {
     @apply text-black;
   }
 
   .container {
-   @apply px-[40px] lg:px-[60px]
+    @apply px-[40px] lg:px-[60px]
   }
 
 }
-

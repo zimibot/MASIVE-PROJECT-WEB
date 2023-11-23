@@ -6,17 +6,15 @@ import { Button, Card } from "@mui/material"
 
 
 
-function HelpCenterAdmin() {
+function DataUser() {
     return (
         <>
-
-
             <Card className="p-5 space-y-5 flex-1" sx={{
                 borderRadius: 3
             }}>
                 <div className="flex justify-between items-center">
                     <div className="font-bold">
-                        Overview Help Center
+                        Overview Data User
                     </div>
                     <div className="float-right">
                         <ButtonBorder>Tambah Data</ButtonBorder>
@@ -36,7 +34,7 @@ function HelpCenterAdmin() {
                                     Email
                                 </th>
                                 <th scope="col" className="px-6 py-3">
-                                    Phone Number
+                                    Username
                                 </th>
                                 <th scope="col" className="px-6 py-3">
                                     Aksi
@@ -55,7 +53,7 @@ function HelpCenterAdmin() {
                                     Galih@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 7858 8454 6584
+                                    Galih001
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -74,7 +72,7 @@ function HelpCenterAdmin() {
                                     Yoga@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 xxxx xxxx xxxx
+                                    Yoga002
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -93,7 +91,7 @@ function HelpCenterAdmin() {
                                     Abimayu@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 xxxx xxxx xxxx
+                                    Abimanyu003
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -112,7 +110,7 @@ function HelpCenterAdmin() {
                                     Nurdila@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 xxxx xxxx xxxx
+                                    Nurdila004
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -131,7 +129,7 @@ function HelpCenterAdmin() {
                                     Fawwaz@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 xxxx xxxx xxxx
+                                    Fawwaz005
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -150,7 +148,7 @@ function HelpCenterAdmin() {
                                     Mubarak@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 xxxx xxxx xxxx
+                                    Mubarak006
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -169,7 +167,7 @@ function HelpCenterAdmin() {
                                     Rina@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 xxxx xxxx xxxx
+                                    Rina007
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -188,7 +186,7 @@ function HelpCenterAdmin() {
                                     Mira@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 xxxx xxxx xxxx
+                                    Mira008
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -207,7 +205,7 @@ function HelpCenterAdmin() {
                                     Alfi@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 xxxx xxxx xxxx
+                                    Alfi009
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -226,7 +224,7 @@ function HelpCenterAdmin() {
                                     Isya@gmail.com
                                 </td>
                                 <td className="px-6 py-4">
-                                    +62 xxxx xxxx xxxx
+                                    Isya010
                                 </td>
                                 <td className="px-6 py-4 space-x-2">
                                     <Button color="error" variant="contained"><Delete></Delete></Button>
@@ -246,4 +244,4 @@ function HelpCenterAdmin() {
     )
 }
 
-export default HelpCenterAdmin
+export default DataUser
