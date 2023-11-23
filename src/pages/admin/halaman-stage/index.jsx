@@ -6,11 +6,22 @@ import { Delete } from "@mui/icons-material"
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 
-function HalamanKategori() {
+function HalamanStage() {
   return (
     <>
     <div className='container mx-auto mt-8'>
-    <div><h3>Overview Kategori</h3></div>
+    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+  Beginner
+</button>
+<span className="m-3">/</span>
+    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+  Unit 1
+</button>
+<span className="m-3">/</span>
+    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+  Stage 1
+</button>
+
 <div className="mt-4 float-right">
 <ButtonBorder>Tambah Data</ButtonBorder>
 </div><br />
@@ -22,11 +33,9 @@ function HalamanKategori() {
                     No
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    Kategori Soal
+                Unit
                 </th>
-                <th scope="col" className="px-6 py-3">
-                    Jumlah Unit
-                </th>
+                
                 <th scope="col" className="px-6 py-3">
                     Aksi
                 </th>
@@ -38,11 +47,9 @@ function HalamanKategori() {
                     1
                 </th>
                 <td className="px-6 py-4">
-                    Beginner
+                Unit 1
                 </td>
-                <td className="px-6 py-4">
-                    4
-                </td>
+                
                 <td className="px-6 py-4">
                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<Delete></Delete>}</button>
                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<BorderColorIcon></BorderColorIcon>}</button>
@@ -51,14 +58,12 @@ function HalamanKategori() {
             </tr>
             <tr className="odd:bg-gray odd:dark:bg-white-900 even:bg-gray-50 even:dark:bg-white-800 border-b dark:border-white-700">
                 <th scope="row" className="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-black">
-                    1
+                    2
                 </th>
                 <td className="px-6 py-4">
-                    Intermidate
+                Unit 2
                 </td>
-                <td className="px-6 py-4">
-                    4
-                </td>
+                
                 <td className="px-6 py-4">
                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<Delete></Delete>}</button>
                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<BorderColorIcon></BorderColorIcon>}</button>
@@ -70,11 +75,9 @@ function HalamanKategori() {
                     3
                 </th>
                 <td className="px-6 py-4">
-                    Advance
+                Unit 3
                 </td>
-                <td className="px-6 py-4">
-                    4
-                </td>
+                
                 <td className="px-6 py-4">
                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<Delete></Delete>}</button>
                 <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<BorderColorIcon></BorderColorIcon>}</button>
@@ -94,4 +97,4 @@ function HalamanKategori() {
   )
 }
 
-export default HalamanKategori
+export default HalamanStage

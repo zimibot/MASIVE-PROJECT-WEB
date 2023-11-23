@@ -11,6 +11,10 @@ import HelpCenterAdmin from "./pages/admin/helpcenter-admin";
 import HalamanKategori from "./pages/admin/halaman-kategori";
 import HalamanBeginer from "./pages/admin/halaman-beginer";
 import HalamanUnit from "./pages/admin/halaman-unit";
+import HalamanStage from "./pages/admin/halaman-stage";
+import TambahSoal from "./pages/admin/tambah-soal";
+import TambahUnit from "./pages/admin/tambah-unit";
+import HalamanSoal from "./pages/admin/halaman-soal";
 
 
 const RoutersPages = () => {
@@ -59,6 +63,15 @@ const RoutersPages = () => {
                     element: <HelpCenterAdmin />,
                 },
                 {
+                    path: "halamanstage",
+                    element: <HalamanStage/>,
+                },
+                {
+                    path: "tambahsoal",
+                    element: <TambahSoal/>,
+                },
+                
+                {
                     path: "halamankategori",
                     element: <HalamanKategori />,
                     children: [
@@ -68,6 +81,19 @@ const RoutersPages = () => {
                         }
                     ]
                 },
+                {
+                    path: "tambahkategori",
+                    element: <TambahKategori/>,
+                },
+                {
+                    path: "tambahunit",
+                    element: <TambahUnit/>,
+                },
+                {
+                    path: "halamansoal",
+                    element: <HalamanSoal/>,
+                },
+                
             ],
         },
         {

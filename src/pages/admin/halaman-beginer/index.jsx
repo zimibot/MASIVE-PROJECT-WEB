@@ -2,6 +2,9 @@ import React from 'react'
 import { ButtonBorder } from '../../../component/elements/button-border';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { Delete } from "@mui/icons-material"
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import BorderColorIcon from '@mui/icons-material/BorderColor';
 
 function HalamanBeginer() {
   return (
@@ -45,9 +48,9 @@ function HalamanBeginer() {
                     4
                 </td>
                 <td className="px-6 py-4">
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<Delete></Delete>}</button>
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<BorderColorIcon></BorderColorIcon>}</button>
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<RemoveRedEyeIcon></RemoveRedEyeIcon>}</button>
                 </td>
             </tr>
             <tr className="odd:bg-gray odd:dark:bg-white-900 even:bg-gray-50 even:dark:bg-white-800 border-b dark:border-white-700">
@@ -61,9 +64,9 @@ function HalamanBeginer() {
                     4
                 </td>
                 <td className="px-6 py-4">
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<Delete></Delete>}</button>
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<BorderColorIcon></BorderColorIcon>}</button>
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<RemoveRedEyeIcon></RemoveRedEyeIcon>}</button>
                 </td>
             </tr>
             <tr className="odd:bg-white odd:dark:bg-white-900 even:bg-gray-50 even:dark:bg-white-800 border-b dark:border-white-700">
@@ -77,9 +80,9 @@ function HalamanBeginer() {
                     4
                 </td>
                 <td className="px-6 py-4">
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<Delete></Delete>}</button>
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<BorderColorIcon></BorderColorIcon>}</button>
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<RemoveRedEyeIcon></RemoveRedEyeIcon>}</button>
                 </td>
             </tr>
         </tbody>
