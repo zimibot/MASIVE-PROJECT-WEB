@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack';
 import { Delete } from "@mui/icons-material"
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
+import { Link } from 'react-router-dom';
 
 function HalamanBeginer() {
   return (
@@ -16,7 +17,10 @@ function HalamanBeginer() {
 </button>
     </div>
 <div className="mt-4 float-right">
-<ButtonBorder>Tambah Data</ButtonBorder>
+<Link to="/admin/halamanunit">
+<ButtonBorder>
+    Tambah Data</ButtonBorder>
+</Link>
 </div><br />
 <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-20">
     <table className="w-full text-sm text-left rtl:text-right text-black dark:text-black">

@@ -2,6 +2,9 @@ import React from 'react'
 import { ButtonBorder } from '../../../component/elements/button-border';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { Delete, Edit, Visibility } from '@mui/icons-material';
+import { Button, Card } from "@mui/material"
+import { Link } from 'react-router-dom';
 
 function HalamanUnit() {
   return (
@@ -22,7 +25,10 @@ function HalamanUnit() {
   <b>Buku Panduan</b>
 </div>
 <div className="mt-4 float-right">
-<ButtonBorder>Tambah Data</ButtonBorder>
+<Link to="/admin/tambahunit">
+<ButtonBorder>
+    Tambah Data</ButtonBorder>
+</Link>
 </div><br />
 <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-20">
     <table className="w-full text-sm text-left rtl:text-right text-black dark:text-black">
@@ -48,15 +54,15 @@ function HalamanUnit() {
                     1
                 </th>
                 <td className="px-6 py-4">
-                Unit 1
+                Stage 1
                 </td>
                 <td className="px-6 py-4">
                     4
                 </td>
-                <td className="px-6 py-4">
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
+                <td className="px-6 py-4 space-x-2">
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Delete></Delete></Button></Link>
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Edit></Edit></Button></Link>
+                <Link to="/admin/halamanstage"><Button color="error" variant="contained"><Visibility></Visibility></Button></Link>
                 </td>
             </tr>
             <tr className="odd:bg-gray odd:dark:bg-white-900 even:bg-gray-50 even:dark:bg-white-800 border-b dark:border-white-700">
@@ -64,15 +70,15 @@ function HalamanUnit() {
                     2
                 </th>
                 <td className="px-6 py-4">
-                Unit 2
+                Stage 2
                 </td>
                 <td className="px-6 py-4">
                     4
                 </td>
-                <td className="px-6 py-4">
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
+                <td className="px-6 py-4 space-x-2">
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Delete></Delete></Button></Link>
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Edit></Edit></Button></Link>
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Visibility></Visibility></Button></Link>
                 </td>
             </tr>
             <tr className="odd:bg-white odd:dark:bg-white-900 even:bg-gray-50 even:dark:bg-white-800 border-b dark:border-white-700">
@@ -80,15 +86,15 @@ function HalamanUnit() {
                     3
                 </th>
                 <td className="px-6 py-4">
-                Unit 3
+                Stage 3
                 </td>
                 <td className="px-6 py-4">
                     4
                 </td>
-                <td className="px-6 py-4">
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mr-2">S</button>
+                <td className="px-6 py-4 space-x-2">
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Delete></Delete></Button></Link>
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Edit></Edit></Button></Link>
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Visibility></Visibility></Button></Link>
                 </td>
             </tr>
         </tbody>

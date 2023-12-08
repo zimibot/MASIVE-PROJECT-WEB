@@ -2,9 +2,10 @@ import React from 'react'
 import { ButtonBorder } from '../../../component/elements/button-border';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { Delete } from "@mui/icons-material"
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import BorderColorIcon from '@mui/icons-material/BorderColor';
+import { Delete, Edit, Visibility } from '@mui/icons-material';
+import { Button, Card } from "@mui/material"
+import { Link } from 'react-router-dom';
+
 
 function HalamanStage() {
   return (
@@ -23,7 +24,10 @@ function HalamanStage() {
 </button>
 
 <div className="mt-4 float-right">
-<ButtonBorder>Tambah Data</ButtonBorder>
+<Link to="/admin/tambahsoal">
+<ButtonBorder>
+    Tambah Data</ButtonBorder>
+</Link>
 </div><br />
 <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-20">
     <table className="w-full text-sm text-left rtl:text-right text-black dark:text-black">
@@ -33,7 +37,7 @@ function HalamanStage() {
                     No
                 </th>
                 <th scope="col" className="px-6 py-3">
-                Unit
+                Soal
                 </th>
                 
                 <th scope="col" className="px-6 py-3">
@@ -47,13 +51,13 @@ function HalamanStage() {
                     1
                 </th>
                 <td className="px-6 py-4">
-                Unit 1
+                Soal 1
                 </td>
                 
-                <td className="px-6 py-4">
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<Delete></Delete>}</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<BorderColorIcon></BorderColorIcon>}</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<RemoveRedEyeIcon></RemoveRedEyeIcon>}</button>
+                <td className="px-6 py-4 space-x-2">
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Delete></Delete></Button></Link>
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Edit></Edit></Button></Link>
+                <Link to="/admin/halamansoal"><Button color="error" variant="contained"><Visibility></Visibility></Button></Link>
                 </td>
             </tr>
             <tr className="odd:bg-gray odd:dark:bg-white-900 even:bg-gray-50 even:dark:bg-white-800 border-b dark:border-white-700">
@@ -61,13 +65,13 @@ function HalamanStage() {
                     2
                 </th>
                 <td className="px-6 py-4">
-                Unit 2
+                Soal 2
                 </td>
                 
-                <td className="px-6 py-4">
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<Delete></Delete>}</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<BorderColorIcon></BorderColorIcon>}</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<RemoveRedEyeIcon></RemoveRedEyeIcon>}</button>
+                <td className="px-6 py-4 space-x-2">
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Delete></Delete></Button></Link>
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Edit></Edit></Button></Link>
+                <Link to="/admin/halamanstage"><Button color="error" variant="contained"><Visibility></Visibility></Button></Link>
                 </td>
             </tr>
             <tr className="odd:bg-white odd:dark:bg-white-900 even:bg-gray-50 even:dark:bg-white-800 border-b dark:border-white-700">
@@ -75,13 +79,13 @@ function HalamanStage() {
                     3
                 </th>
                 <td className="px-6 py-4">
-                Unit 3
+                Soal 3
                 </td>
                 
-                <td className="px-6 py-4">
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<Delete></Delete>}</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<BorderColorIcon></BorderColorIcon>}</button>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mr-2">{<RemoveRedEyeIcon></RemoveRedEyeIcon>}</button>
+                <td className="px-6 py-4 space-x-2">
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Delete></Delete></Button></Link>
+                <Link to="/admin/beginer"><Button color="error" variant="contained"><Edit></Edit></Button></Link>
+                <Link to="/admin/halamanstage"><Button color="error" variant="contained"><Visibility></Visibility></Button></Link>
                 </td>
             </tr>
         </tbody>

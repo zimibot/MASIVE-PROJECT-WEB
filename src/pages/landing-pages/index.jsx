@@ -85,7 +85,7 @@ const Landingspages = () => {
                     <div className="relative">
                         <img className="w-[350px]" src={shield} alt="" />
                         <div className="absolute bottom-[-30px] px-4 w-full">
-                            <Button fullWidth color="inherit" variant="contained" className="flex flex-col gap-3 !text-white !py-4" sx={{
+                            <Button href="/kategori/beginner" fullWidth color="inherit" variant="contained" className="flex flex-col gap-3 !text-white !py-4" sx={{
                                 bgcolor: "#F5F7FA"
                             }}>
                                 <p className="text-center text-neutral-500 text-sm font-semibold leading-tight">Beginer</p>
@@ -100,7 +100,7 @@ const Landingspages = () => {
                     <div className="relative">
                         <img className="w-[350px]" src={star} alt="" />
                         <div className="absolute bottom-[-30px] px-4 w-full">
-                            <Button fullWidth color="inherit" variant="contained" className="flex flex-col gap-3 !text-white !py-4" sx={{
+                            <Button href="/kategori/intermediate"  fullWidth color="inherit" variant="contained" className="flex flex-col gap-3 !text-white !py-4" sx={{
                                 bgcolor: "#F5F7FA"
                             }}>
                                 <p className="text-center text-neutral-500 text-sm font-semibold leading-tight">Intermediate</p>
