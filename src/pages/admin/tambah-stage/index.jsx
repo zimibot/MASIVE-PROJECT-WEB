@@ -5,25 +5,30 @@ import { ButtonBorder } from '../../../component/elements/button-border';
 import Joi from 'joi';
 import instance from '../../../middleware/api';
 import Swal from 'sweetalert2'
-
-function TambahUnit() {
+import { useNavigate } from 'react-router-dom'
+function TambahStage() {
   const location = useLocation()
+  const navi = useNavigate()
 
-  const id = location.pathname.split("/")[6]?.split("_")[0]
-  const idEdit = location.pathname.split("/")[6]?.split("_")[1]
-  const name = location.pathname.split("/")[5]
-  const type = location.pathname.split("/")[4]
+  const parts = location.pathname.split('/');
+
+  // Function to check if a part of the URL is a MongoDB ObjectId
+  const isObjectId = (part) => /^[0-9a-fA-F]{24}$/.test(part);
+
+  // Find the first two occurrences of ObjectIds in the URL
+  const objectIds = parts.filter(part => isObjectId(part));
+
+
+  const type = location.pathname.split("/").pop()
   const [formValues, setFormValues] = useState({
-    unit: '',
+    stage: '',
     description: '',
-    guidebook: ''
   });
   const [errors, setErrors] = useState({});
 
   const schema = Joi.object({
-    unit: Joi.string().required().label('Unit'),
+    stage: Joi.string().required().label('Stage'),
     description: Joi.string().required().label('Deskripsi'),
-    guidebook: Joi.string().required().label('Buku Panduan')
   });
 
   const validate = () => {
@@ -37,13 +42,12 @@ function TambahUnit() {
   };
 
   useEffect(() => {
-    if (type === "edit") {
-      instance.get(`/admin/unit/id?id=${id}`).then(d => {
-
+    if (type !== "add") {
+      instance.get(`/admin/stage/${objectIds[2]}`).then(d => {
+        console.log(d.data.items.stage)
         setFormValues({
-          unit: d.data.items.unit,
+          stage: d.data.items.stage,
           description: d.data.items.description,
-          guidebook: d.data.items.guidebook,
         })
       })
     }
@@ -62,20 +66,22 @@ function TambahUnit() {
 
       let value = type === "add" ? {
         ...formValues,
-        category_id: id
+        category_id: objectIds[0],
+        unit_id: objectIds[1]
       } : {
         ...formValues,
-        id: id
+        id: objectIds[2]
       }
 
-      let pos = type === "add" ? await instance.post("/admin/unit/create", value) : await instance.put("/admin/unit/edit", value)
+      let pos = type === "add" ? await instance.post("/admin/stage/create", value) : await instance.put(`/admin/stage/${objectIds[2]}/edit`, value)
       if (pos.status === 201) {
         Swal.fire({
           title: "BERHASIL",
           icon: "success",
-          text: "Berhasil Menambahkan Unit",
+          text: "Berhasil Menambahkan stage",
           didClose: () => {
-            window.location.href = `/admin/halamankategori/${name}/${id}`
+            // window.location.href = `/admin/halamankategori/${name}/${id}`
+            navi(-1)
           }
         })
       }
@@ -84,9 +90,10 @@ function TambahUnit() {
         Swal.fire({
           title: "BERHASIL",
           icon: "success",
-          text: "Berhasil Edit Unit",
+          text: "Berhasil Edit stage",
           didClose: () => {
-            window.location.href = `/admin/halamankategori/${name}/${idEdit}`
+            navi(-1)
+            // window.location.href = `/admin/halamankategori/${name}/${idEdit}`
           }
         })
       }
@@ -112,21 +119,21 @@ function TambahUnit() {
     <>
       <div className='card flex flex-col bg-white mt-4 pb-4'>
         <div className='header-card w-full h-16 bg-red-700 text-white rounded-t-lg'>
-          <div className="ml-4 mt-4">{type === "add" ? "Tambahkan" : "Edit"} Unit</div>
+          <div className="ml-4 mt-4">{type === "add" ? "Tambahkan" : "Edit"} Stage</div>
         </div>
 
         <form onSubmit={handleSubmit} className="grid grid-cols-4 container py-6 gap-6">
           <div className="col-span-1 flex items-center">
-            <div>Unit</div>
+            <div>Stage</div>
           </div>
           <div className="col-span-3">
             <TextField
               fullWidth
-              name="unit"
-              value={formValues.unit}
+              name="stage"
+              value={formValues.stage}
               onChange={handleChange}
-              error={Boolean(errors.unit)}
-              helperText={errors.unit}
+              error={Boolean(errors.stage)}
+              helperText={errors.stage}
             />
           </div>
 
@@ -143,20 +150,6 @@ function TambahUnit() {
               helperText={errors.description}
             />
           </div>
-
-          <div className="col-span-1 flex items-center">
-            <div>Buku Panduan</div>
-          </div>
-          <div className="col-span-3">
-            <textarea
-              className="w-full border min-h-[100px] p-4"
-              name="guidebook"
-              value={formValues.guidebook}
-              onChange={handleChange}
-            ></textarea>
-            {errors.guidebook && <div className="text-red-500 text-xs">{errors.guidebook}</div>}
-          </div>
-
           <div className="mt-4 flex items-center justify-center col-span-4">
             <ButtonBorder type="submit">Simpan</ButtonBorder>
           </div>
@@ -166,4 +159,4 @@ function TambahUnit() {
   )
 }
 
-export default TambahUnit;
+export default TambahStage;

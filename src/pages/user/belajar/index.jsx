@@ -7,6 +7,7 @@ import LockRoundedIcon from '@mui/icons-material/LockRounded';
 import Chess from '../../../assets/icon/chess.png';
 import LockShield from '../../../assets/icon/lockshield.png';
 import GoldenChess from '../../../assets/icon/goldenchess.png';
+import { Link } from 'react-router-dom';
 
 function Belajar() {
     return (
@@ -33,7 +34,9 @@ function Belajar() {
                             </div>
                         </div>
                         <div className="flex flex-row gap-11 mt-16 ms-11">
-                            <div className="w-[60px] h-[60px] bg-red-500 rounded-full border-b-[3px] border-slate-400 relative"><StarRateRoundedIcon sx={{ color: 'white', fontSize: '40px' }} className='absolute left-[9px] top-2'></StarRateRoundedIcon></div>
+                            <Link to={"/user/soal"}>
+                                <div className="w-[60px] h-[60px] bg-red-500 rounded-full border-b-[3px] border-slate-400 relative"><StarRateRoundedIcon sx={{ color: 'white', fontSize: '40px' }} className='absolute left-[9px] top-2'></StarRateRoundedIcon></div>
+                            </Link>
                             <div className="w-[60px] h-[60px] bg-neutral-200 rounded-full border-b-[3px] border-slate-400  relative"><LockRoundedIcon sx={{ color: 'black', fontSize: '30px' }} className='absolute left-[14px] top-3'></LockRoundedIcon></div>
                             <div className="w-[60px] h-[60px] bg-neutral-200 rounded-full border-b-[3px] border-slate-400  relative"><LockRoundedIcon sx={{ color: 'black', fontSize: '30px' }} className='absolute left-[14px] top-3'></LockRoundedIcon></div>
                             <div className="w-[60px] h-[60px] bg-neutral-200 rounded-full border-b-[3px] border-slate-400  relative"><LockRoundedIcon sx={{ color: 'black', fontSize: '30px' }} className='absolute left-[14px] top-3'></LockRoundedIcon></div>

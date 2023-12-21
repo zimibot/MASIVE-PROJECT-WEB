@@ -1,4 +1,4 @@
-import { ArrowForward } from "@mui/icons-material"
+import { ArrowForward, Logout } from "@mui/icons-material"
 import { ButtonBorder } from "../../component/elements/button-border"
 import { Layout } from "../../component/layout"
 import ImageRight from "../..//assets/image-right.svg"
@@ -11,6 +11,15 @@ import rocked from "../..//assets/icon/rocked.png"
 import { Button } from "@mui/material"
 
 const Landingspages = () => {
+
+    let token = window.localStorage.getItem("token")
+    let roles = window.localStorage.getItem("roles")
+
+    const onLogout = () => {
+        window.localStorage.clear()
+        window.location.reload()
+    }
+
     return <Layout>
         <div className="bg-red-100 w-full min-h-[600px] flex flex-col">
             <div className="container mx-auto flex-1 flex items-center overflow-hidden">
@@ -19,14 +28,25 @@ const Landingspages = () => {
                         <h1>Sosio-Cultural</h1>
                         <p>Media belajar bahasa daerah,dengan beragam sumber daya, pelajaran audio, dan fitur interaktif.</p>
                         <div className="flex gap-6 flex-col lg:flex-row">
-                            <ButtonBorder href="/login" iconRight={<ArrowForward></ArrowForward>}>
-                                Get Started
-                            </ButtonBorder>
-                            <ButtonBorder href="/registrasi" variant="outlined" style={{
-                                minWidth: "280px"
-                            }}>
-                                Sudah Punya Akun?
-                            </ButtonBorder>
+                            {token ? <>
+                                <ButtonBorder href={roles === "user" ? "/user" : "/admin"} iconRight={<ArrowForward></ArrowForward>}>
+                                    Dashboard
+                                </ButtonBorder>
+                                <ButtonBorder onClick={onLogout} iconLeft={<Logout></Logout>} variant="outlined" style={{
+                                    minWidth: "280px"
+                                }}>
+                                    Logout
+                                </ButtonBorder>
+                            </> : <>
+                                <ButtonBorder href="/login" iconRight={<ArrowForward></ArrowForward>}>
+                                    Get Started
+                                </ButtonBorder>
+                                <ButtonBorder href="/registrasi" variant="outlined" style={{
+                                    minWidth: "280px"
+                                }}>
+                                    Sudah Punya Akun?
+                                </ButtonBorder></>}
+
                         </div>
                     </div>
                     <div className="relative hidden justify-center xl:flex">
@@ -100,7 +120,7 @@ const Landingspages = () => {
                     <div className="relative">
                         <img className="w-[350px]" src={star} alt="" />
                         <div className="absolute bottom-[-30px] px-4 w-full">
-                            <Button href="/kategori/intermediate"  fullWidth color="inherit" variant="contained" className="flex flex-col gap-3 !text-white !py-4" sx={{
+                            <Button href="/kategori/intermediate" fullWidth color="inherit" variant="contained" className="flex flex-col gap-3 !text-white !py-4" sx={{
                                 bgcolor: "#F5F7FA"
                             }}>
                                 <p className="text-center text-neutral-500 text-sm font-semibold leading-tight">Intermediate</p>
@@ -115,7 +135,7 @@ const Landingspages = () => {
                     <div className="relative">
                         <img className="w-[350px]" src={rocked} alt="" />
                         <div className="absolute bottom-[-30px] px-4 w-full">
-                            <Button fullWidth color="inherit" variant="contained" className="flex flex-col gap-3 !text-white !py-4" sx={{
+                            <Button href="/kategori/advance" fullWidth color="inherit" variant="contained" className="flex flex-col gap-3 !text-white !py-4" sx={{
                                 bgcolor: "#F5F7FA"
                             }}>
                                 <p className="text-center text-neutral-500 text-sm font-semibold leading-tight">Advanced</p>
